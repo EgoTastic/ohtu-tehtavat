@@ -52,8 +52,7 @@ public class Player implements Comparable<Player> {
 
     @Override
     public String toString() {      
-        return String.format("%-20s",name) + " " + team + " " + String.format("%2d",goals) + " + " 
-                + String.format("%2d",assists) + " = " + getPoints();
+        return String.format("%-20s",name) + " " + team + " " + String.format("%2d",goals) + " + " + String.format("%2d",assists) + " = " + getPoints();
     }
 
     public int compareTo(Player t) {
