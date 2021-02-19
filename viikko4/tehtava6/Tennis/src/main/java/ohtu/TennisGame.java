@@ -12,7 +12,7 @@ public class TennisGame {
 
         this.player1Name = player1Name;
         this.player2Name = player2Name;
-        
+
     }
 
     public void wonPoint(String playerName) {
@@ -37,20 +37,14 @@ public class TennisGame {
         } else {
 
             return getScoreNoWinTieAdvantage();
-
+            
         }
     }
 
     private String getScoreTie() {
 
-        if (this.player1Score == 0) {
-            return "Love-All";
-        } else if (this.player1Score == 1) {
-            return "Fifteen-All";
-        } else if (this.player1Score == 2) {
-            return "Thirty-All";
-        } else if (this.player1Score == 3) {
-            return "Forty-All";
+        if (this.player1Score <= 3) {
+            return pointsToText[player1Score] + "-All";
         } else {
             return "Deuce";
         }
@@ -73,6 +67,5 @@ public class TennisGame {
     private String getScoreNoWinTieAdvantage() {
 
         return pointsToText[this.player1Score] + "-" + pointsToText[this.player2Score];
-
     }
 }
