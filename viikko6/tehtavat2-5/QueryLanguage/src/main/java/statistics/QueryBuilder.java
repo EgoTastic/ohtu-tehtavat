@@ -14,7 +14,7 @@ public class QueryBuilder {
     }
     
     public QueryBuilder playsIn(String team) {
-        this.matcher = new PlaysIn(team);
+        this.matcher = new And(this.matcher, new PlaysIn(team));
         return this;
     }
 
